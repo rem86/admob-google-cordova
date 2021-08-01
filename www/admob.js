@@ -205,3 +205,13 @@ if (typeof module !== 'undefined') {
 
 window.admob = admob;
 window.tappx = admob;
+
+/**
+ * Destroy ad. 
+ *
+ * @param {function()} successCallback The function to call if the ad was shown successfully.
+ * @param {function()} failureCallback The function to call if the ad failed to be shown.
+ */
+admob.onDestroy = function (successCallback, failureCallback) {
+  cordova.exec(successCallback, failureCallback, 'AdMobAds', 'onDestroy', []);
+};
