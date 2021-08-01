@@ -73,7 +73,7 @@ public class AdMobAds extends CordovaPlugin implements IConnectivityChange {
 
     private static final boolean CORDOVA_4 = Integer.valueOf(CordovaWebView.CORDOVA_VERSION.split("\\.")[0]) >= 4;
     private static final String DEFAULT_AD_PUBLISHER_ID = "ca-app-pub-8440343014846849/3119840614";
-    private static final String DEFAULT_INTERSTITIAL_PUBLISHER_ID = "ca-app-pub-8440343014846849/4596573817";
+    private static final String DEFAULT_INTERSTITIAL_PUBLISHER_ID = "ca-app-pub-4596688289461003/5949275536";
     private static final String DEFAULT_REWARDED_PUBLISHER_ID = "ca-app-pub-8440343014846849/4854611361";
     private static final String DEFAULT_TAPPX_ID = "/120940746/Pub-2700-Android-8171";
 
@@ -628,13 +628,13 @@ public class AdMobAds extends CordovaPlugin implements IConnectivityChange {
                     _interstitialAdId = DEFAULT_TAPPX_ID;
                 }
             } else if (!isGo2TappxInIntesrtitialBackfill) {
-                _interstitialAdId = "ca-app-pub-8440343014846849/4596573817";
+                _interstitialAdId = "ca-app-pub-4596688289461003/5949275536";
                 isGo2TappxInIntesrtitialBackfill = true;
             } else {
                 _interstitialAdId = DEFAULT_TAPPX_ID;
             }
         } else if (isBackFill && !isGo2TappxInIntesrtitialBackfill) {
-            _interstitialAdId = "ca-app-pub-8440343014846849/4596573817";
+            _interstitialAdId = "ca-app-pub-4596688289461003/5949275536";
             isGo2TappxInIntesrtitialBackfill = true;
         } else if (isBackFill) {
             _interstitialAdId = DEFAULT_TAPPX_ID;
