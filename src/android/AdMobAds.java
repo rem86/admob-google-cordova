@@ -86,6 +86,7 @@ public class AdMobAds extends CordovaPlugin implements IConnectivityChange {
     private static final String ACTION_SHOW_INTERSTITIAL_AD = "showInterstitialAd";
     private static final String ACTION_REQUEST_REWARDED_AD = "requestRewardedAd";
     private static final String ACTION_SHOW_REWARDED_AD = "showRewardedAd";
+    private static final String ACTION_DESTROY = "onDestroy";
 
     /* options */
     private static final String OPT_PUBLISHER_ID = "publisherId";
@@ -211,6 +212,8 @@ public class AdMobAds extends CordovaPlugin implements IConnectivityChange {
 
         } else if (ACTION_SHOW_REWARDED_AD.equals(action)) {
             result = executeShowRewardedAd(callbackContext);
+        } else if (ACTION_DESTROY.equals(action)) {
+            onDestroy();
         } else {
             Log.d(ADMOBADS_LOGTAG, String.format("Invalid action passed: %s", action));
             return false;
